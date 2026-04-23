@@ -6,16 +6,16 @@ set $left h
 set $down j
 set $up k
 set $right l
-# set $term kitty
-set $term foot
+set $term kitty
+# set $term foot
 # set $term ghostty
 set $menu wofi --show drun -n
 set $lock swaylock
 set $osd-server swayosd-server
 set $osd swayosd-client
 set $theme-colorscheme 'Adwaita-dark'
-set $theme-icons 'bessurf-blue'
-set $theme-cursor 'DeppinDark-cursor'
+set $theme-icons 'Vimix-doder-dark'
+set $theme-cursor 'Moga-Cursor'
 
 # ====================================
 # Autostart
@@ -23,7 +23,7 @@ set $theme-cursor 'DeppinDark-cursor'
 
 # sway session issues
 # exec_always --no-startup-id dbus-update-activation-environment --all
-exec dbus-update-activation-environment --all XDG_CURRENT_DESKTOP=sway XDG_SESSION_DESKTOP=sway XCURSOR_THEME=$cursor_theme
+exec dbus-update-activation-environment --all XDG_CURRENT_DESKTOP=sway XDG_SESSION_DESKTOP=sway XCURSOR_THEME=$cursor-theme
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP DISPLAY
 
 
@@ -43,7 +43,7 @@ exec --no-startup-id nm-applet
 # exec --no-startup-id waybar
 exec --no-startup-id swaync
 # exec --no-startup-id swww img --transition-type "any" $HOME/.config/wallpaper/main.jpg
-exec --no-startup-id swaybg -i $HOME/Pictures/Wallpaper/wallhaven-4g2erd.png
+exec --no-startup-id swaybg -i $HOME/Pictures/Wallpaper/wallhaven-d8ekmg.png
 exec swayidle -w \
             timeout 10800 $lock \
             before-sleep $lock
@@ -52,7 +52,7 @@ exec --no-startup-id $osd-server
 exec_always --no-startup-id autotiling
 # exec_always --no-startup-id eww daemon
 exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-theme $theme-colorscheme
-exec --no-startup-id gsettings set org.gnome.desktop.interface color-scheme $theme-colorscheme
+exec --no-startup-id gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 exec --no-startup-id gsettings set org.gnome.desktop.interface icon-theme $theme-icons
 exec --no-startup-id gsettings set org.gnome.desktop.interface cursor-theme $theme-cursor
 seat * xcursor_theme $theme-cursor 24
@@ -310,12 +310,12 @@ bindsym XF86PowerOff exec $terminal
 # ====================================
 # Styles
 # ====================================
-# default_border pixel 2
+default_border pixel 2
 
 # Gaps
-smart_gaps no
-gaps inner 0
-gaps outer 0
+# smart_gaps yes
+gaps inner 12
+gaps outer 6
 
 # Set border colors (normal, focused, urgent, background)
 # client.focused #1e1e2e #1e1e2e #1e1e2e #1e1e2e
@@ -340,23 +340,23 @@ font pango:Iosevka Nerd Font 10
 # original sway
 # ====================================
 # Radius
-# corner_radius 12
+corner_radius 8
 
 # Blur
-# blur enable
-# blur_xray true
-# blur_radius 2
-# blur_passes 5
-# blur_brightness 0.789
-# blur_contrast 1.045
-# blur_noise 0.0186
+blur enable
+blur_xray true
+blur_radius 2
+blur_passes 5
+blur_brightness 0.789
+blur_contrast 1.045
+blur_noise 0.0186
 
 # Shadow
-# shadows enable
-# shadows_on_csd enable
-# shadow_offset 2 4
-# shadow_color #00000040
-# shadow_blur_radius 12
+shadows enable
+shadows_on_csd enable
+shadow_offset 2 4
+shadow_color #00000040
+shadow_blur_radius 12
 
 # titlebar_separator disable
 # scratchpad_minimize disable
@@ -366,21 +366,23 @@ font pango:Iosevka Nerd Font 10
 # ====================================
 
 # global opacity
-# for_window [app_id=".*"] opacity 0.85;
+for_window [app_id=".*"] opacity 0.75;
 
 # overwrite gnome applications
 # for_window [app_id="org.gnome.*"] opacity 0.9;
-# for_window [app_id="wofi"] floating enable; move position center; border none; opacity 0.9;
+for_window [app_id="wofi"] floating enable; move position center; border pixel 2; opacity 0.98; radius 8;
 # for_window [app_id="com.obsproject.Studio"] opacity 1.0;
 # for_window [app_id="app.zen_browser.zen"] opacity 1.0
-for_window [app_id="foot"] opacity 0.98
-for_window [app_id="firefox-bin"] opacity 1.0
+for_window [app_id="foot"] opacity 0.85
+for_window [app_id="firefox"] opacity 1.0
+for_window [app_id="dev.zed.Zed"] opacity 0.98
+for_window [app_id="code-oss"] opacity 0.95
 # for_window [app_id="virt-manager"] opacity 1.0
 
 # Floating
 for_window [app_id="java"] floating enable, move position center;
 for_window [app_id="nm-connection-editor"] floating enable; move position center;
-for_window [app_id="firefox-bin" title="Picture-in-Picture"] floating enable, move position center;
+for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, move position center;
 for_window [app_id="app.zen_browser.zen" title="Picture-in-Picture"] floating enable, move position center;
 
 
@@ -400,6 +402,18 @@ bar {
 
     font pango:Iosevka Nerd Font 9.5
 
+    # colors {
+    #     background #24273a
+    #     statusline #cad3f5
+    #     separator  #5b6078
+    # 
+    #     focused_workspace      #b7bdf8  #b7bdf8  #181926
+    #     active_workspace       #91d7e3  #36394f  #cad3f5
+    #     inactive_workspace     #36394f  #1e2030  #8087a2
+    #     urgent_workspace       #ed8796  #ed8796  #181926
+    #     binding_mode           #eed49f  #eed49f  #181926
+    # }
+
     colors {
         background #000000
         statusline #ffffff
@@ -411,6 +425,7 @@ bar {
         urgent_workspace   #2f343a #900000 #ffffff
         binding_mode       #2f343a #900000 #ffffff
     }
+
 }
 
 
