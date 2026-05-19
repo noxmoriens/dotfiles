@@ -24,7 +24,7 @@ set $theme-cursor 'Moga-Cursor'
 # sway session issues
 # exec_always --no-startup-id dbus-update-activation-environment --all
 exec dbus-update-activation-environment --all XDG_CURRENT_DESKTOP=sway XDG_SESSION_DESKTOP=sway XCURSOR_THEME=$cursor-theme
-exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP DISPLAY
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP DISPLAY GNOME_KEYRING_CONTROL SSH_AUTH_SOCK
 
 
 # xdg-desktop-portal
@@ -59,6 +59,8 @@ seat * xcursor_theme $theme-cursor 24
 
 exec --no-startup-id brightnessctl --restore
 
+# gnome-keyring daemon
+exec_always --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 
 
 ### Output configuration
@@ -314,8 +316,8 @@ default_border pixel 2
 
 # Gaps
 # smart_gaps yes
-gaps inner 12
-gaps outer 6
+gaps inner 0
+gaps outer 0
 
 # Set border colors (normal, focused, urgent, background)
 # client.focused #1e1e2e #1e1e2e #1e1e2e #1e1e2e
@@ -340,7 +342,7 @@ font pango:Iosevka Nerd Font 10
 # original sway
 # ====================================
 # Radius
-corner_radius 8
+corner_radius 4
 
 # Blur
 blur enable
@@ -366,7 +368,7 @@ shadow_blur_radius 12
 # ====================================
 
 # global opacity
-for_window [app_id=".*"] opacity 0.75;
+for_window [app_id=".*"] opacity 0.85;
 
 # overwrite gnome applications
 # for_window [app_id="org.gnome.*"] opacity 0.9;
