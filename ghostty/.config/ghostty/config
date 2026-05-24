@@ -1,0 +1,23 @@
+term = xterm-256color
+
+font-family = "FantasqueSansM Nerd Font Mono"
+font-size = 16
+font-feature = "-liga"
+
+theme = Gruvbox Dark
+background-opacity = 1.0
+background-blur = true
+
+confirm-close-surface = true
+
+window-vsync = 0
+window-decoration = auto
+window-colorspace = srgb
+window-padding-balance = true
+window-padding-x = 4
+window-padding-y = 4
+
+bold-is-bright = true
+
+working-directory = home
+tab-inherit-working-directory = true

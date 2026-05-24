@@ -1,0 +1,60 @@
+# Background
+image=$HOME/.config/wallpaper/six-lock.png
+color=1e1e2e
+
+# Font
+font=MartianMono Nerd Font Mono
+font-size=14
+
+# Indicator
+indicator-radius=58
+indicator-thickness=8
+indicator-idle-visible
+
+# Inside
+inside-color=1e1e2e
+inside-clear-color=a6e3a1
+inside-caps-lock-color=89dceb
+inside-ver-color=74c7ec
+inside-wrong-color=f38ba8
+
+# Ring
+ring-color=313244
+ring-clear-color=a6e3a1
+ring-caps-lock-color=89dceb
+ring-ver-color=74c7ec
+ring-wrong-color=f38ba8
+
+# Line
+line-color=313244
+line-clear-color=a6e3a1
+line-caps-lock-color=89dceb
+line-ver-color=74c7ec
+line-wrong-color=f38ba8
+
+# Key highlight
+key-hl-color=89b4fa
+bs-hl-color=f38ba8
+caps-lock-key-hl-color=f9e2af
+caps-lock-bs-hl-color=fab387
+
+# Separator
+separator-color=6c7086
+
+# Text
+text-color=cdd6f4
+text-clear-color=1e1e2e
+text-caps-lock-color=1e1e2e
+text-ver-color=1e1e2e
+text-wrong-color=1e1e2e
+
+# Layout box
+layout-bg-color=313244
+layout-border-color=6c7086
+layout-text-color=cdd6f4
+
+show-failed-attemps
+show-layout
+scalling fill
+tiling
+
