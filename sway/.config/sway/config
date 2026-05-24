@@ -347,10 +347,10 @@ corner_radius 12
 # Blur
 blur enable
 blur_xray true
-blur_radius 2
-blur_passes 5
-blur_brightness 0.789
-blur_contrast 1.045
+blur_radius 5
+blur_passes 6
+blur_brightness 0.900
+blur_contrast 1.060
 blur_noise 0.0186
 
 # Shadow
@@ -368,7 +368,7 @@ shadow_blur_radius 12
 # ====================================
 
 # global opacity
-for_window [app_id=".*"] opacity 0.75;
+for_window [app_id=".*"] opacity 0.60;
 
 # overwrite gnome applications
 # for_window [app_id="org.gnome.*"] opacity 0.9;
