@@ -316,8 +316,8 @@ default_border pixel 2
 
 # Gaps
 # smart_gaps yes
-gaps inner 0
-gaps outer 0
+gaps inner 8
+gaps outer 6
 
 # Set border colors (normal, focused, urgent, background)
 # client.focused #1e1e2e #1e1e2e #1e1e2e #1e1e2e
@@ -341,8 +341,8 @@ font pango:Iosevka Nerd Font 10
 # Disable these options if you use
 # original sway
 # ====================================
-# Radius
-corner_radius 4
+# Radiuscorner_radius
+corner_radius 12
 
 # Blur
 blur enable
@@ -368,7 +368,7 @@ shadow_blur_radius 12
 # ====================================
 
 # global opacity
-for_window [app_id=".*"] opacity 0.85;
+for_window [app_id=".*"] opacity 0.75;
 
 # overwrite gnome applications
 # for_window [app_id="org.gnome.*"] opacity 0.9;
