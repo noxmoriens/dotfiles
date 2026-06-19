@@ -1,0 +1,230 @@
+[
+  {
+    "layer": "top",
+    "reload_style_on_change": true,
+    "gtk-layer-shell": true,
+    "modules-left": [
+      "custom/arch",
+      "sway/workspaces",
+      "tray"
+    ],
+    "modules-center": [],
+    "modules-right": [
+      "backlight",
+      "pulseaudio",
+      "battery",
+      "network",
+      "clock"
+    ],
+    "mpris": {
+      "format": "{player_icon}  {title} - {artist}",
+      "format-paused": "<span color='#eb6f92'></span> <span color='#6e6a86'>{title}</span>",
+      "title-len": 19,
+      "player-icons": {
+        "default": "",
+        "mpv": "󰝚",
+        "firefox": "<span color='#f6c177'></span>",
+        "spotify": "<span color='#9ccfd8'></span>"
+      }
+    },
+    "custom/arch": {
+      "format": "<span color='#c4a7e7'>  </span> ",
+      "tooltip": false
+    },
+    "sway/window": {
+      "format": " <span color='#9ccfd8'></span> ({app_id} - {shell} )",
+      "tooltip": false,
+      "icon": false,
+      "icon-size": 14
+    },
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "tooltip": false,
+      "all-output": false,
+      "format-icons": {
+        "active": "",
+        "default": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "󰯜"
+      },
+      "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "6": []
+      }
+    },
+    "sway/workspaces": {
+      "format": " {icon} ",
+      "tooltip": false,
+      "all-output": false,
+      "format-icons": {
+        "focused": "",
+        "urgent": "",
+        "default": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "󰯜"
+      },
+      "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "6": []
+      }
+    },
+    "cpu": {
+      "interval": 3,
+      "format": "{icon}  {load:.2f}",
+      "format-icons": [
+        "<span color='#9ccfd8'></span>",
+        "<span color='#9ccfd8'></span>",
+        "<span color='#9ccfd8'></span>",
+        "<span color='#f6c177'></span>",
+        "<span color='#f6c177'></span>",
+        "<span color='#f6c177'></span>",
+        "<span color='#eb6f92'></span>",
+        "<span color='#eb6f92'></span>",
+        "<span color='#eb6f92'></span>"
+      ]
+    },
+    "memory": {
+      "interval": 3,
+      "format": " {icon}  {used:.2f}/{total:.2f}GB",
+      "tooltip-format": "used {percentage}% of ram",
+      "format-icons": [
+        "<span color='#9ccfd8'></span>",
+        "<span color='#9ccfd8'></span>",
+        "<span color='#9ccfd8'></span>",
+        "<span color='#f6c177'></span>",
+        "<span color='#f6c177'></span>",
+        "<span color='#f6c177'></span>",
+        "<span color='#eb6f92'></span>",
+        "<span color='#eb6f92'></span>",
+        "<span color='#eb6f92'></span>"
+      ]
+    },
+    "disk": {
+      "interval": 60,
+      "format": "<span color='#9ccfd8'></span>  {specific_used:0.2f} GB",
+      "unit": "GB",
+      "path": "/home"
+    },
+    "backlight": {
+      "interval": 1,
+      "format": "{icon} {percent}%",
+      "tooltip-format": "{percent}%",
+      "format-icons": [
+        "<span color='#f6c17766'></span>",
+        "<span color='#f6c17780'></span>",
+        "<span color='#f6c17799'></span>",
+        "<span color='#f6c177b3'></span>",
+        "<span color='#f6c177cc'></span>",
+        "<span color='#f6c177e6'></span>",
+        "<span color='#f6c177f0'></span>",
+        "<span color='#f6c177fa'></span>",
+        "<span color='#f6c177ff'></span>",
+        "<span color='#f6c177'></span>"
+      ]
+    },
+    "pulseaudio": {
+      "interval": 1,
+      "format": "<span color='#9ccfd8'>{icon}</span> {volume}%",
+      "format-muted": "<span color='#6e6a86'></span>",
+      "format-icons": {
+        "headphone": "",
+        "default": [
+          "",
+          "",
+          "󰕾",
+          "󰕾",
+          "",
+          "",
+          ""
+        ]
+      },
+      "scroll-step": 1
+    },
+    "battery": {
+      "interval": 1,
+      "format": "{icon} {capacity}%",
+      "format-icons": [
+        "<span color='#eb6f92'>󰂃</span>",
+        "<span color='#eb6f92'>󰂃</span>",
+        "<span color='#f6c177'>󰁼</span>",
+        "<span color='#f6c177'>󰁽</span>",
+        "<span color='#f6c177'>󰁾</span>",
+        "<span color='#f6c177'>󰁿</span>",
+        "<span color='#9ccfd8'>󰂀</span>",
+        "<span color='#9ccfd8'>󰂁</span>",
+        "<span color='#9ccfd8'>󰂂</span>",
+        "<span color='#9ccfd8'>󱟢</span>"
+      ],
+      "format-charging": "<span color='#c4a7e7'>󰂄</span> {capacity}%"
+    },
+    "custom/search": {
+      "format": "<span color='#e0def4'></span>",
+      "tooltip": false,
+      "on-click": "wofi --show drun -n"
+    },
+    "custom/quick-panel": {
+      "format": "<span color='#e0def4'>󰨚</span>",
+      "tooltip": false,
+      "on-click": "swaync-client --toggle-panel"
+    },
+    "network": {
+      "interval": 5,
+      "interface": [
+        "wlp2s0",
+        "enp3s0f3u1"
+      ],
+      "format": "{}",
+      "format-wifi": "<span color='#9ccfd8'></span>  {signalStrength}%",
+      "format-ethernet": "{ipaddr}/{cidr}",
+      "tooltip-format": "<span size='7pt'> {bandwidthDownBytes}</span> <span size='7pt'> {bandwidthUpBytes}</span>",
+      "format-disconnected": "<span color='#6e6a86'>󰌙 Disconnected</span> ",
+      "on-click-right": "nm-connection-editor -c",
+      "on-click": "nm-connection-editor"
+    },
+    "clock": {
+      "interval": 30,
+      "format": "{:%a %d %b %I:%M %p}",
+      "tooltip": true,
+      "tooltip-format": "{calendar}",
+      "calendar": {
+        "mode": "year",
+        "mode-mon-col": 3,
+        "weeks-pos": "right",
+        "on-scroll": 1,
+        "format": {
+          "months": "<span color='#c4a7e7'><b>{}</b></span>",
+          "days": "<span color='#9ccfd8'>{}</span>",
+          "weeks": "<span color='#9ccfd8'><b>W{}</b></span>",
+          "weekdays": "<span color='#c4a7e7'><b>{}</b></span>",
+          "today": "<span color='#eb6f92'><b>{}</b></span>"
+        }
+      },
+      "actions": {
+        "on-click-right": "mode",
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
+      }
+    },
+    "tray": {
+      "icon-size": 12,
+      "spacing": 16,
+      "icons": {}
+    }
+  }
+]

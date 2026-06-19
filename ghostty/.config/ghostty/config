@@ -2,10 +2,11 @@ term = xterm-256color
 
 font-family = "FantasqueSansM Nerd Font Mono"
 font-size = 16
-font-feature = "-liga"
+# font-feature = "-liga"
 
-theme = Gruvbox Dark
-background-opacity = 1.0
+theme = rose-pine-moon
+
+background-opacity = 0.62
 background-blur = true
 
 confirm-close-surface = true
@@ -14,10 +15,15 @@ window-vsync = 0
 window-decoration = auto
 window-colorspace = srgb
 window-padding-balance = true
-window-padding-x = 4
-window-padding-y = 4
+window-padding-x = 8
+window-padding-y = 8
 
 bold-is-bright = true
 
+mouse-scroll-multiplier = 0.25
 working-directory = home
-tab-inherit-working-directory = true
+tab-inherit-working-directory = false
+
+# Animation shaders
+custom-shader-animation = always
+custom-shader = ./shaders/cursor_sweep.glsl

@@ -1,9 +1,9 @@
 # Background
 image=$HOME/.config/wallpaper/six-lock.png
-color=1e1e2e
+color=232136
 
 # Font
-font=MartianMono Nerd Font Mono
+font=Iosevka Nerd Font
 font-size=14
 
 # Indicator
@@ -12,49 +12,48 @@ indicator-thickness=8
 indicator-idle-visible
 
 # Inside
-inside-color=1e1e2e
-inside-clear-color=a6e3a1
-inside-caps-lock-color=89dceb
-inside-ver-color=74c7ec
-inside-wrong-color=f38ba8
+inside-color=232136
+inside-clear-color=3e8fb0
+inside-caps-lock-color=9ccfd8
+inside-ver-color=9ccfd8
+inside-wrong-color=eb6f92
 
 # Ring
-ring-color=313244
-ring-clear-color=a6e3a1
-ring-caps-lock-color=89dceb
-ring-ver-color=74c7ec
-ring-wrong-color=f38ba8
+ring-color=393552
+ring-clear-color=3e8fb0
+ring-caps-lock-color=9ccfd8
+ring-ver-color=9ccfd8
+ring-wrong-color=eb6f92
 
 # Line
-line-color=313244
-line-clear-color=a6e3a1
-line-caps-lock-color=89dceb
-line-ver-color=74c7ec
-line-wrong-color=f38ba8
+line-color=44415a
+line-clear-color=3e8fb0
+line-caps-lock-color=9ccfd8
+line-ver-color=9ccfd8
+line-wrong-color=eb6f92
 
 # Key highlight
-key-hl-color=89b4fa
-bs-hl-color=f38ba8
-caps-lock-key-hl-color=f9e2af
-caps-lock-bs-hl-color=fab387
+key-hl-color=c4a7e7
+bs-hl-color=eb6f92
+caps-lock-key-hl-color=f6c177
+caps-lock-bs-hl-color=ea9a97
 
 # Separator
-separator-color=6c7086
+separator-color=6e6a86
 
 # Text
-text-color=cdd6f4
-text-clear-color=1e1e2e
-text-caps-lock-color=1e1e2e
-text-ver-color=1e1e2e
-text-wrong-color=1e1e2e
+text-color=e0def4
+text-clear-color=232136
+text-caps-lock-color=232136
+text-ver-color=232136
+text-wrong-color=232136
 
 # Layout box
-layout-bg-color=313244
-layout-border-color=6c7086
-layout-text-color=cdd6f4
+layout-bg-color=393552
+layout-border-color=6e6a86
+layout-text-color=e0def4
 
 show-failed-attemps
 show-layout
 scalling fill
 tiling
-

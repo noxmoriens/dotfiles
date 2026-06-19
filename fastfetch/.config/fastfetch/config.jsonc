@@ -4,7 +4,7 @@
     "display": {
         "separator": " \u001b[90m ",
         "color": {
-            "title": "blue"
+            "title": "magenta"
         }
     },
     "logo": {
@@ -27,42 +27,42 @@
             "type": "os",
             "key": "  ",
             "format": "{3}",
-            "keyColor": "32"
+            "keyColor": "140"
         },
         {
             "type": "kernel",
             "key": " 󰍛 ",
-            "keyColor": "33"
+            "keyColor": "183"
         },
         {
             "type": "wm",
             "key": " 󰭠 ",
-            "keyColor": "34"
+            "keyColor": "74"
         },
         {
             "type": "shell",
             "key": "  ",
-            "keyColor": "35"
+            "keyColor": "117"
         },
         {
             "type": "terminal",
             "key": "  ",
-            "keyColor": "36"
+            "keyColor": "174"
         },
         {
             "type": "uptime",
             "key": " 󰔚 ",
-            "keyColor": "37"
+            "keyColor": "180"
         },
         {
             "type": "memory",
             "key": "  ",
-            "keyColor": "35"
+            "keyColor": "168"
         },
         {
             "type": "packages",
             "key": " 󰏗 ",
-            "keyColor": "34"
+            "keyColor": "110"
         },
         "break",
         {
